@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  player1 = 'assets/imagens/image_icon_favorite_8_pic_512x512.png';
+  player1 = 'assets/imagens/Gota.png';
   player2 = 'assets/imagens/image_icon_x_mark_pic_512x512.png';
   noPlayer = 'assets/imagens/white%20panel.png';
   currentImages: string[] = [];
@@ -127,7 +127,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       if (this.currentImages[position[contador]] === currentPlayer &&
         this.currentImages[position[contador + 1]] === currentPlayer &&
         this.currentImages[position[contador + 2]] === currentPlayer) {
-        alert('Player: ' + this.playerName + ' venceu, retire o seu prêmio');
+        alert('Player: ' + this.playerName + ' venceu, retire o seu prêmio no RH com o código: ' + Math.random());
         this.router.navigate(['empresa']);
         this.hasWin = true;
         break;
